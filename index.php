@@ -50,7 +50,7 @@
 
 <!-- #####################    2nd NAVIGATION     ############################ -->
 <div>
-<ul class="nav nav-pills red flex-column flex-sm-row justify-content-center nav-fill">
+<ul class="nav nav-pills red flex-column flex-sm-row justify-content-center nav-fill mt-3">
   <li class="nav-item pill-1">
     <a class="nav-link active" href="#">Summery</a>
   </li>
@@ -62,6 +62,8 @@
   </li>
 </ul>
 </div>
+
+<div><hr class="style5"></div>
     </main>
 
     <!-- Optional JavaScript -->

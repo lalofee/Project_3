@@ -2,7 +2,7 @@
 body {
   min-height: 75rem;
   padding-top: 4.5rem;
-  background-color: beige;
+  background-color: ;
 }
 /* ###### CSS override styling the navbar #####  */
 .navbar-custom {
@@ -30,18 +30,23 @@ body {
   color: #FFFFFF;
 }
 /* ############  nav-pills 2nd menu override ###########  */
+.nav {
+  font-size: 1.4em;
+}
 /* not active */
 .nav-pills .pill-1 .nav-link:not(.active) {
-    background-color: white;
+    background-color: beige;
+    color: maroon;
 }
 
 .nav-pills .pill-2 .nav-link:not(.active) {
-    background-color: none;
+    background-color: beige;
+    color: maroon;
 }
 
 .nav-pills .pill-3 .nav-link:not(.active) {
-    background-color: none;
-    color: white;
+    background-color: beige;
+    color: maroon;
 }
 /* active (faded) */
 .nav-pills .pill-1 .nav-link {
@@ -49,15 +54,19 @@ body {
     color: white;
 }
 
-.nav-pills .pill-2 .nav-link {
+.nav-pills .pill-2 .nav-link { 
     background-color: maroon;
+    color: white;
 }
 
 .nav-pills .pill-3 .nav-link {
     background-color: maroon;
     color: white;
 }
-
+hr.style5 {
+  background-color: beige;
+  border-top: 2px dashed #800000;
+}
 
 /* JUMBOTRON background image  */
 /*.jumbotron {
@@ -81,9 +90,5 @@ html,body {height:100%;width:100%;}
 
 /*  navigation  */
 .nav {
-  color: maroon;
-  font-size: 1.8em;
-}
-.bg-custom-red {
-  color: maroon;
+  font-size: 1.4em;
 }
