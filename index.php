@@ -50,14 +50,14 @@
 
 <!-- #####################    2nd NAVIGATION     ############################ -->
 <div>
-<ul class="nav nav-pills flex-column flex-sm-row justify-content-center nav-fill">
-  <li class="nav-item">
+<ul class="nav nav-pills red flex-column flex-sm-row justify-content-center nav-fill">
+  <li class="nav-item pill-1">
     <a class="nav-link active" href="#">Summery</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item pill-2">
     <a class="nav-link" href="#">Ingredients</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item pill-3">
     <a class="nav-link" href="#">Recipe</a>
   </li>
 </ul>
