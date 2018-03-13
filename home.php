@@ -26,10 +26,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="filter.php">Filter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="search.php">Search</a>
           </li>
         </ul>
       </div>
@@ -40,7 +40,7 @@
  <!-- #####################    JUMBOTRON HEADER     ############################ -->
   <div class="container-full-bg" style="background-image:url('img/header.jpg');">
     <div class="container special">
-      <div class="jumbotron">
+      <div class="jumbotron" id="jumbotron-bg-image">
         <div class="container">
           <h1 class="white">Asian Noodlebowl</h1>
       </div>

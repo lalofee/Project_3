@@ -22,20 +22,54 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.php">Home</a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Filter<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="search.php">Search</a>
           </li>
         </ul>
       </div>
     </nav>
 
 <main role="main" class="container">  <!-- MAIN CONTAINER  -->
+
+  <!-- #####################    JUMBOTRON HEADER     ############################ -->
+      <div class="jumbotron">
+          <h1 class="display-5 text-center">Filter the Recipes</h1>
+    </div>
+ 
+ <div class="row">
+   <div class="col">
+      <div class="radio">
+          <label><input type="radio" name="optradio">Option 1</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio">Option 2</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio">Option 3</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio">Option 1</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio">Option 2</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio">Option 3</label>
+        </div>
+   </div>
+ </div>
+
+
+
+
+
+
 
 
 </main>

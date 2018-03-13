@@ -82,13 +82,19 @@ min-height: 20em;
     background-size: 100% 100%;
 }*/
 
-/*  styling for the jumbotron */
+/*  styling for the jumbotron with background image*/
 html,body {height:100%;width:100%;}
-.jumbotron {background-color:inherit;}
+#jumbotron-bg-image {background-color:inherit;}
 .container-full-bg {width:100%;height:100%;max-width:100%;background-position:center;background-size:cover;}
 .container-full-bg .container, .container-full-bg .container .jumbotron {height:100%;width:100%;}
 
 /*  navigation  */
 .nav {
   font-size: 1.4em;
+}
+
+.jumbotron {
+  background-color: beige;
+  color: grey;
+  
 }
