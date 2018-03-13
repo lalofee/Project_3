@@ -14,7 +14,7 @@
   </head>
   <body>
     
-
+<!-- #####################    FIXED NAVBAR     ############################ -->
     <nav class="navbar navbar-custom navbar-expand-md fixed-top">
       <a class="navbar-brand" href="#">Recipe Me</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,39 +32,85 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn maroon-background white my-2 my-sm-0" type="submit">Search</button>
-        </form>
       </div>
     </nav>
 
-    <main role="main" class="container">
+<main role="main" class="container">  <!-- MAIN CONTAINER  -->
  
  <!-- #####################    JUMBOTRON HEADER     ############################ -->
- <div class="container-full-bg" style="background-image:url('img/header.jpg');">
-  <div class="container special">
-      <div class="jumbotron">One</div>
+  <div class="container-full-bg" style="background-image:url('img/header.jpg');">
+    <div class="container special">
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-12 col-md-12">
+          <h1 class="display-3 white">Asian Noodlebowl</h1>
+          </div>
+          </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- #####################    2nd NAVIGATION     ############################ -->
-<div>
-<ul class="nav nav-pills red flex-column flex-sm-row justify-content-center nav-fill mt-3">
-  <li class="nav-item pill-1">
-    <a class="nav-link active" href="#">Summery</a>
-  </li>
-  <li class="nav-item pill-2">
-    <a class="nav-link" href="#">Ingredients</a>
-  </li>
-  <li class="nav-item pill-3">
-    <a class="nav-link" href="#">Recipe</a>
-  </li>
-</ul>
+  <div>
+      <ul class="nav nav-pills red flex-column flex-sm-row justify-content-center nav-fill mt-3">
+    <li class="nav-item pill-1">
+      <a class="nav-link active" href="#">Summery</a>
+    </li>
+    <li class="nav-item pill-2">
+      <a class="nav-link" href="#">Ingredients</a>
+    </li>
+    <li class="nav-item pill-3">
+      <a class="nav-link" href="#">Recipe</a>
+    </li>
+    </ul>
+  </div>
+
+
+<!-- #####################    SUMMARY     ############################ -->
+<div class="row" id="summary">
+  <div class="col-s-12 col-md-12 mt-6 mb-6">
+  <h3>Preperation Time:</h3>
+  <h3>Cooking Time:</h3>
+  <h4>Inhalte:</h4>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
 </div>
 
 <div><hr class="style5"></div>
-    </main>
+
+<!-- #####################    INGREDIENTS     ############################ -->
+<div class="row" id="ingredients">
+  <div class="col-s-12 col-md-12 mt-6 mb-6">
+    <h3>Ingredients:</h3>
+       <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Cras justo odio</li>
+        </ul>
+  </div>
+</div>
+
+<div><hr class="style5"></div>
+
+<!-- #####################    RECIPE     ############################ -->
+<div class="row" id="recipe">
+  <div class="col-s-12 col-md-12 mt-6 mb-6">
+    <h3>Recipe:</h3>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div> 
+</div>
+
+
+</main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

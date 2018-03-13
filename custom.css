@@ -6,12 +6,12 @@ body {
 }
 /* ###### CSS override styling the navbar #####  */
 .navbar-custom {
-    background-color: burlywood;
+    background-color: #00FF7F;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: maroon;
+    color: grey;
 }
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
@@ -24,7 +24,7 @@ body {
 }
 /* ########  Button Style override  ####### */
 .maroon-background {
-  background-color: #800000;
+  background-color: grey;
 }
 .white {
   color: #FFFFFF;
@@ -36,36 +36,36 @@ body {
 /* not active */
 .nav-pills .pill-1 .nav-link:not(.active) {
     background-color: beige;
-    color: maroon;
+    color: grey;
 }
 
 .nav-pills .pill-2 .nav-link:not(.active) {
     background-color: beige;
-    color: maroon;
+    color: grey;
 }
 
 .nav-pills .pill-3 .nav-link:not(.active) {
     background-color: beige;
-    color: maroon;
+    color: grey;
 }
 /* active (faded) */
 .nav-pills .pill-1 .nav-link {
-    background-color: maroon;
+    background-color: grey;
     color: white;
 }
 
 .nav-pills .pill-2 .nav-link { 
-    background-color: maroon;
+    background-color: grey;
     color: white;
 }
 
 .nav-pills .pill-3 .nav-link {
-    background-color: maroon;
+    background-color: grey;
     color: white;
 }
 hr.style5 {
   background-color: beige;
-  border-top: 2px dashed #800000;
+  border-top: 2px dashed #00FF7F;
 }
 
 /* JUMBOTRON background image  */
