@@ -93,8 +93,19 @@ html,body {height:100%;width:100%;}
   font-size: 1.4em;
 }
 
-.jumbotron {
+/*.jumbotron {
   background-color: beige;
   color: grey;
   
+}*/
+ul {
+  list-style-type: none;
+}
+#bg_text {
+  background-color: white;
+  opacity: 0.8;
+}
+
+.fa {
+  color:green;
 }

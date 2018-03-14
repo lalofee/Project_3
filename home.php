@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- custom css -->
     <link rel="stylesheet" href="css/custom.css">
-  </head>
     <title>Recipe Me</title>
   </head>
   <body>
     
 <!-- #####################    FIXED NAVBAR     ############################ -->
     <nav class="navbar navbar-custom navbar-expand-md fixed-top">
-      <a class="navbar-brand" href="#">Recipe Me</a>
+      <a class="navbar-brand" href="index.php">Recipe Me</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
