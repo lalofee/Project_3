@@ -179,9 +179,9 @@
         </ul>
 
 <!-- LOGIN and REGISTER  -->
-<ul class="nav navbar-nav navbar-right">
-  <li class="dropdown">
-  <a href="" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+<ul class="navbar-nav navbar-right">
+  <li class="dropdown nav-item">
+  <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">Register <span class="caret"></span></a>
     <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
       <div class="col-lg-12">
         <div class="text-center"><h3><b>Register</b></h3></div>
@@ -224,8 +224,8 @@
             </ul>
           </li>
                     
-          <li class="dropdown">
-          <a href="" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+          <li class="dropdown nav-item">
+          <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">Log In <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
               <div class="col-lg-12">
                 <div class="text-center"><h3><b>Log In</b></h3></div>

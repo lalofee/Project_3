@@ -1,3 +1,16 @@
+<?php 
+session_start();
+ 
+require_once 'actions/dbconnect.php';
+
+//select logged-in users detail
+ $res=mysqli_query($conn, "SELECT * FROM users WHERE userid=".$_SESSION['user']);
+
+ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+
+ ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,6 +20,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="css/custom.css">
     <!-- custom google font -->
@@ -31,8 +47,9 @@
             <a class="nav-link" href="upload.php">New Recipe</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="logout.php?logout">Sign Out</a></li>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item"><span class="nav-link">Welcome - <?php echo $userRow['username']; ?></span></li>
+          <li class="nav-item"><a class="nav-link" href="logout.php?logout">Sign Out</a></li>
         </ul>
       </div>
     </nav>
@@ -44,22 +61,22 @@
 <main role="main" class="container">  <!-- MAIN CONTAINER  -->
 
   <!-- #####################    JUMBOTRON HEADER     ############################ -->
-     <!--  <div class="jumbotron" style="background-image:url('img/fruits.jpg'); opacity: 0.7">
-          <h1 class="display-5 text-center">Filter and select recipes</h1>
-    </div> -->
-      <div class="container-full-bg" style="background-image:url('img/fruits.jpg');">
-        <div class="container special" >
-          <div class="jumbotron" id="jumbotron-filter">
-            
-              <h1 class="white">Filter and select recipes</h1>
-           
-          </div>
+<div class='container-full-bg' style='background-image:url(img/header.jpg);'>
+    <div class='container special'>
+      <div class='jumbotron' id='jumbotron-bg-image'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-s-12 col-md-12' id='bg_text'>
+              <h1 class='display-3 text-center' id='brand_text'>Filter your Recipes</h1>
+            </div>
         </div>
       </div>
-<br>
-<br>
+    </div>
+  </div>
+</div>
 
-<div class="row mx-auto">
+
+<div class="row mx-auto rounded mt-5 p-5" id="bg_filter">
 
 <div class="col-lg-4">
  <div class="ml-5">
@@ -69,9 +86,9 @@
    </div>
    <fieldset type="text" class="form-check" aria-label="Text input with checkbox button"> - my recipes - </fieldset>
   </div>
-<br>
+
 <!-- <form action="filter_try.php" method="post"> -->
-  <div class="input-group">
+  <div class="input-group mt-2">
    <div class="input-group-prepend">
     <label>
       <input type="hidden" name="categories[]" value="main-meal" aria-label="checkbox button for following text input">
@@ -80,15 +97,15 @@
    </div>
    <fieldset type="text" class="form-check" aria-label="Text input with checkbox button"> - main-meal - </fieldset>
   </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" name="categories[]" value="starter" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" aria-label="Text input with checkbox button"> - starter - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" name="categories[]" value="breakfast" -label="checkbox button for following text input"></label>
   </div>
@@ -97,8 +114,8 @@
 <!-- <input type="submit" name="submit" value="submit">
 <?php include 'checkbox_value.php';?>
 </form> -->
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
@@ -116,35 +133,35 @@
   </div>
   <fieldset type="text" class="form-check" name="categories" value="sugar-free" aria-label="Text input with checkbox button"> - sugar-free - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="egg-free" aria-label="Text input with checkbox button"> - egg-free - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="vegan" aria-label="Text input with checkbox button"> - vegan - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="vegetarian" aria-label="Text input with checkbox button"> - vegetarian - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="lactose-free" aria-label="Text input with checkbox button"> - lactose-free - </fieldset>
 </div>
-<br>
+
 </div>
 </div>
 <div class="col-lg-4">
@@ -155,35 +172,35 @@
   </div>
   <fieldset type="text" class="form-check" name="categories" value="low-carb" aria-label="Text input with checkbox button"> - low-carb - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="dairy-free" aria-label="Text input with checkbox button"> - dairy-free - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="nut-free" aria-label="Text input with checkbox button"> - nut-free - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="drinks" aria-label="Text input with checkbox button"> - drinks - </fieldset>
 </div>
-<br>
-<div class="input-group">
+
+<div class="input-group mt-2">
   <div class="input-group-prepend">
     <label><input type="checkbox" aria-label="checkbox button for following text input"></label>
   </div>
   <fieldset type="text" class="form-check" name="categories" value="shakes" aria-label="Text input with checkbox button"> - shakes-smoothies - </fieldset>
 </div> 
-<br>
+
 </div>
 </div> 
 <br>
@@ -192,9 +209,9 @@
 <br>
 <br>
 <center>
-    <button type="submit" class="btn btn-outline-success btn-block" style="width: 55%">Find your selected recipes</button>
+    <a href="recipe.php"><button type="submit" class="btn btn-outline-success btn-block" style="width: 55%">Find your selected recipes</button></a>
 </center>
-<br>
+
 
 <?php
 // $my_recipes="";
@@ -214,6 +231,16 @@ echo "<p>" .$main_meal.$starter.$breakfast. "</p>"
 
 
 ?>
+
+<footer class="footer">
+      <div class="container text-center mt-5 mb-4">
+        <span class="text-muted font-weight-bold">created by   <a href="https://github.com/sabkiha"><i class="fa fa-github"> Sabine</i></a></span>
+                                           <a href=""></a><i class="fa fa-github"> Nina</i></span>
+                                           <a href="https://github.com/tpatkos"><i class="fa fa-github"> Theo</i></a></span>
+                                           <a href="https://github.com/lalofee"><i class="fa fa-github"> Angela</i></a></span>
+      </div>
+    </footer>
+
 </main>
 
     

@@ -3,12 +3,12 @@ session_start();
  
 require_once 'actions/dbconnect.php';
 
-// select logged-in users detail
- // $res=mysqli_query($conn, "SELECT * FROM users WHERE userid=".$_SESSION['user']);
+//select logged-in users detail
+ $res=mysqli_query($conn, "SELECT * FROM users WHERE userid=".$_SESSION['user']);
 
- // $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 
-// Welcome - <?php echo $userRow['userName'];
+
 ?>
  
 <!doctype html>
@@ -50,8 +50,9 @@ require_once 'actions/dbconnect.php';
             <a class="nav-link" href="upload.php">New Recipe</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="logout.php?logout">Sign Out</a></li>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item"><span class="nav-link">Welcome - <?php echo $userRow['username']; ?></span></li>
+          <li class="nav-item"><a class="nav-link" href="logout.php?logout">Sign Out</a></li>
         </ul>
       </div>
     </nav>
@@ -107,7 +108,7 @@ WHERE (`recipe`.`idRecipe` = 2)
     </ul>
   </div>
  
-<div><hr class="style5"></div>
+<div><hr class="style5 mt-4"></div>
 
  <!-- #####################    Category     ############################ -->
   <div class="col-s-12 col-md-12 mt-5 pl-0" id="section1">
@@ -208,123 +209,12 @@ WHERE (`recipe`.`idRecipe` =2)
   </div>
 </div>
 
-<!-- #######################  COMMENT SECTION  ####################### -->
-  <div class="container">
-    <div class="row mt-5">
-      <div class="col-md-6 offset-md-3 col-sm-6 offset-sm-3 col-12 comments-main pt-4 rounded">
-        <ul class="p-0">
-          <li>
-            <div class="row comments mb-2">
-              <div class="col-md-2 col-sm-2 col-3 text-center user-img">
-                  <img id="profile-photo" src="demo/man01.png" class="rounded-circle" />
-              </div>
-              <div class="col-md-9 col-sm-9 col-9 comment rounded mb-2">
-                <h4 class="m-0"><a href="#">Jacks David</a></h4>
-                  <time class="text-white ml-3">1 hours ago</time>
-                  <like></like>
-                  <p class="mb-0 text-white">Thank you for this great recipe.</p>
-              </div>
-            </div>
-          </li>
-          <ul class="p-0">
-            <li>
-              <div class="row comments mb-2">
-                <div class="col-md-2 offset-md-2 col-sm-2 offset-sm-2 col-3 offset-1 text-center user-img">
-                    <img id="profile-photo" src="demo/man02.png" class="rounded-circle" />
-                </div>
-                <div class="col-md-7 col-sm-7 col-8 comment rounded mb-2">
-                  <h4 class="m-0"><a href="#">Steve Alex</a></h4>
-                    <time class="text-white ml-3">1 week ago</time>
-                    <like></like>
-                    <p class="mb-0 text-white">Thank you for this great recipe.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </ul>
-        <ul class="p-0">
-          <li>
-            <div class="row comments mb-2">
-              <div class="col-md-2 col-sm-2 col-3 text-center user-img">
-                  <img id="profile-photo" src="demo/man03.png" class="rounded-circle" />
-              </div>
-              <div class="col-md-9 col-sm-9 col-9 comment rounded mb-2">
-                <h4 class="m-0"><a href="#">Andrew Filander</a></h4>
-                  <time class="text-white ml-3">7 day ago</time>
-                  <like></like>
-                  <p class="mb-0 text-white">Thank you for this great recipe..</p>
-              </div>
-            </div>
-          </li>
-          <ul class="p-0">
-            <li>
-              <div class="row comments mb-2">
-                <div class="col-md-2 offset-md-2 col-sm-2 offset-sm-2 col-3 offset-1 text-center user-img">
-                    <img id="profile-photo" src="demo/man04.png" class="rounded-circle" />
-                </div>
-                <div class="col-md-7 col-sm-7 col-8 comment rounded mb-2">
-                  <h4 class="m-0"><a href="#">james Cordon</a></h4>
-                    <time class="text-white ml-3">1 min ago</time>
-                    <like></like>
-                    <p class="mb-0 text-white">Thank you for this great recipe..</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </ul>
-        <ul class="p-0">
-          <li>
-            <div class="row comments mb-2">
-              <div class="col-md-2 col-sm-2 col-3 text-center user-img">
-                  <img id="profile-photo" src="demo/man01.png" class="rounded-circle" />
-              </div>
-              <div class="col-md-9 col-sm-9 col-9 comment rounded mb-2">
-                <h4 class="m-0"><a href="#">Tye Simmon</a></h4>
-                  <time class="text-white ml-3">1 month ago</time>
-                  <like></like>
-                  <p class="mb-0 text-white">Thank you for this great recipe.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="row comment-box-main p-3 rounded-bottom">
-            <div class="col-md-9 col-sm-9 col-9 pr-0 comment-box">
-            <input type="text" class="form-control" placeholder="comment ...." />
-            </div>
-            <div class="col-md-3 col-sm-2 col-2 pl-0 text-center send-btn">
-              <button class="btn btn-info">Send</button>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </body>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.14/vue.min.js'></script>
-  <script>
-  Vue.component('like', {
-      template: "<div class='like-data float-right text-white'><button class='icon-rocknroll mr-1 p-0 border-0' v-class='active: liked' v-on='click: toggleLike'><i class='fa fa-thumbs-up text-white' aria-hidden='true'></i></button><span class='like-count' v-class='active: liked'>{{ likesCount }}</span></div>",
-      data: function() {
-          return {
-              liked: false,
-              likesCount: 0
-          }
-      },
-      methods: {
-          toggleLike: function() {
-              this.liked = !this.liked;
-              this.liked ? this.likesCount++ : this.likesCount--;
-          }
-      }
-  });
-  new Vue({
-      el: '.comments-main',
-  });
-  </script>
+
 
 
 <!-- scroll to top button  -->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  <div style="background-color:#5DDDD3;color:white;padding:30px; border-bottom: 3px solid #43C3B9; position: fixed; width: 100%; top: 0px;">
+ 
   
 
 <script>
@@ -346,7 +236,7 @@ WHERE (`recipe`.`idRecipe` =2)
  
 </main>
 <footer class="footer">
-      <div class="container text-center">
+      <div class="container text-center mt-5 mb-4">
         <span class="text-muted font-weight-bold">created by   <a href="https://github.com/sabkiha"><i class="fa fa-github"> Sabine</i></a></span>
                                            <a href=""></a><i class="fa fa-github"> Nina</i></span>
                                            <a href="https://github.com/tpatkos"><i class="fa fa-github"> Theo</i></a></span>
