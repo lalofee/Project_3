@@ -1,26 +1,48 @@
 /* CSS for Navbar: Show it is fixed to the top */
 body {
-  min-height: 75rem;
   padding-top: 4.5rem;
-  background-color: ;
+  background: #E9ECE9;
+  font-family: 'Noto Sans', sans-serif;
+  height:100%;width:100%;
+}
+
+
+#index_body {
+  background: url('../img/index.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#brand_text {
+  font-family: 'Berkshire Swash', cursive;
+}
+#index_text h1 {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 10em;
+  color: beige;
+}
+#index_text h3, h5 {
+  font-family: 'Noto Sans', sans-serif; 
+  color:beige;
 }
 /* ###### CSS override styling the navbar #####  */
 .navbar-custom {
-    background-color: #00FF7F;
+    background-color: #32CD32;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: grey;
+    color: beige;
 }
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
+    color: beige;
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
+    color:  #FFA07A;
 }
 /* ########  Button Style override  ####### */
 .maroon-background {
@@ -64,8 +86,8 @@ body {
     color: white;
 }
 hr.style5 {
-  background-color: white;
-  border-top: 2px dashed #00FF7F;
+  background-color: #E9ECE9;
+  border-top: 2px dashed  #32CD32;
 }
 
 /* JUMBOTRON background image  */
@@ -83,7 +105,6 @@ min-height: 20em;
 }*/
 
 /*  styling for the jumbotron with background image*/
-html,body {height:100%;width:100%;}
 #jumbotron-bg-image {background-color:inherit;}
 .container-full-bg {width:100%;height:100%;max-width:100%;background-position:center;background-size:cover;}
 .container-full-bg .container, .container-full-bg .container .jumbotron {height:100%;width:100%;}
@@ -105,7 +126,117 @@ ul {
   background-color: white;
   opacity: 0.8;
 }
+#index-bg {
+  color:#FFA07A;
+  opacity: 
+}
 
 .fa {
-  color:green;
+  color:#32CD32;
 }
+
+/*  scroll to top button design  */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color:#32CD32;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border-radius:50%;
+  font-weight: bold;
+}
+#myBtn:hover {
+  background-color:#000;
+} 
+
+/*  Comment Box Design  */
+body{
+  
+  
+}
+.comments-main{
+  background: #FFF;
+}
+.comment time, .comment:hover time,.icon-rocknroll, .like-count {
+  -webkit-transition: .25s opacity linear;
+  transition: .25s opacity linear;
+}
+.comments-main ul li{
+  list-style: none;
+}
+.comments .comment {
+  padding: 5px 10px;
+  background: #00AF90;
+}
+.comments .comment:hover time{
+  opacity: 1;
+}
+.comments .user-img img {
+  width: 50px;
+  height: 50px;
+}
+.comments .comment h4 {
+  display: inline-block;
+  font-size: 16px;
+}
+.comments .comment h4 a {
+  color: #404040;
+  text-decoration: none;
+}
+.comments .comment .icon-rocknroll {
+  color: #545454;
+  font-size: .85rem;
+}
+.comments .comment .icon-rocknroll:hover {
+  opacity: .5;
+}
+.comments .comment time,.comments .comment .like-count,.comments .comment .icon-rocknroll {
+  font-size: .75rem;
+  opacity: 0;
+}
+.comments .comment time, .comments .comment .like-count {
+  font-weight: 300;
+}
+.comments .comment p {
+  font-size: 13px;
+}
+.comments .comment p .reply {
+  color: #BFBFA8;
+  cursor: pointer;
+}
+.comments .comment .active {
+  opacity: 1;
+}
+.icon-rocknroll {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 .125rem 0 0;
+}
+.comments .comment:hover .icon-rocknroll,.comments .comment:hover .like-count {
+  opacity: 1;
+}
+.comment-box-main{
+  background: #CA1D5F;
+}
+@media (min-width: 320px) and (max-width: 480px){
+  .comments .comment h4 {
+    font-size: 12px;
+  }
+  .comments .comment p{
+    font-size: 11px;
+  }
+  .comment-box-main .send-btn button{
+    margin-left: 5px;
+  }
+}
+
+/*lime green: #32CD32*/
+/*light salmon: #FFA07A*/
